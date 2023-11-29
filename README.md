@@ -60,13 +60,13 @@ amass enum -active -d microsoft.com | grep api
 ### Gobuster
 Gobuster can be used to brute-force URIs and DNS subdomains from the command line. (If you prefer a graphical user interface, check out OWASP’s Dirbuster.) In Gobuster, you can use wordlists for common directories and subdomains to automatically request every item in the wordlist and send them to a web server and filter the interesting server responses. The results generated from Gobuster will provide you with the URL path and the HTTP status response codes. (While you can brute-force URIs with Burp Suite’s Intruder, Burp Community Edition is much slower than Gobuster.)
 ```
-gobuster dir -u http://127.0.0.1:8888 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+gobuster dir -u http://127.0.0.1:8888 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt | grep 200
 ```
-Example :[Uploading api_wordlist.txt…]()
+Example :[Wordlist](api_wordlist.txt)
 
 ```
   ┌──(iftx㉿kali)-[~/lab/crapi]
-└─$ gobuster dir -u https://www.reddit.com -w /home/iftx/Desktop/API_Hacking/api_wordlist.txt
+└─$ gobuster dir -u https://www.reddit.com -w /home/iftx/Desktop/API_Hacking/api_wordlist.txt 
 ===============================================================
 Gobuster v3.6
 by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
@@ -94,3 +94,4 @@ Starting gobuster in directory enumeration mode
 /application.wadl     (Status: 302) [Size: 0] [--> https://www.reddit.com/submit?url=https%3A%2F%2Fapplication.wadl]                                                                                    
 /backup.sql           (Status: 302) [Size: 0] [--> https://www.reddit.com/submit?url=https%3A%2F%2Fbackup.sql]
 ```                                                                               
+### kiterunner
