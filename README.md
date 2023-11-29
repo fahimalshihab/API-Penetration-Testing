@@ -62,3 +62,35 @@ Gobuster can be used to brute-force URIs and DNS subdomains from the command lin
 ```
 gobuster dir -u http://127.0.0.1:8888 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
 ```
+Example :[Uploading api_wordlist.txt…]()
+
+```
+  ┌──(iftx㉿kali)-[~/lab/crapi]
+└─$ gobuster dir -u https://www.reddit.com -w /home/iftx/Desktop/API_Hacking/api_wordlist.txt
+===============================================================
+Gobuster v3.6
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     https://www.reddit.com
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /home/iftx/Desktop/API_Hacking/api_wordlist.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.6
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+/graphql-proxy/admin  (Status: 302) [Size: 407] [--> /graphql-proxy/admin?rdt=57900]
+/active               (Status: 301) [Size: 0] [--> https://www.reddit.com/user/lowkotz/comments/active/screaming_anal_from_everythingbuttcom/]                                                          
+/adminer.sql          (Status: 302) [Size: 0] [--> https://www.reddit.com/submit?url=https%3A%2F%2Fadminer.sql]                                                                                         
+/admin.php            (Status: 302) [Size: 0] [--> https://www.reddit.com/submit?url=https%3A%2F%2Fadmin.php]                                                                                           
+/after.sh             (Status: 302) [Size: 0] [--> https://www.reddit.com/submit?url=https%3A%2F%2Fafter.sh]                                                                                            
+/altair               (Status: 301) [Size: 0] [--> https://www.reddit.com/user/callmefpolito/comments/altair/i_made_a_stop_motion_animation/]                                                           
+/apikey               (Status: 301) [Size: 0] [--> https://www.reddit.com/r/cursedimages/comments/apikey/cursed_cat/]                                                                                   
+/api/v1/labels        (Status: 401) [Size: 32349]
+/api/v1/swagger.json  (Status: 401) [Size: 41]
+/api/v1/targets       (Status: 401) [Size: 32349]
+/application.wadl     (Status: 302) [Size: 0] [--> https://www.reddit.com/submit?url=https%3A%2F%2Fapplication.wadl]                                                                                    
+/backup.sql           (Status: 302) [Size: 0] [--> https://www.reddit.com/submit?url=https%3A%2F%2Fbackup.sql]
+```                                                                               
